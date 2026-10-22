@@ -35,29 +35,36 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-corner top-left" aria-hidden="true"></div>
-      <div class="hero-corner top-right" aria-hidden="true"></div>
-      <div class="hero-corner bottom-left" aria-hidden="true"></div>
-      <div class="hero-corner bottom-right" aria-hidden="true"></div>
-      <div class="hero-body">
-        <div class="hero-kicker"><span class="glow-dot" aria-hidden="true"></span> DJ / ORGANIZER · OFFICIAL WEBSITE</div>
-        <h1 id="hero-title" class="hero-logo"><img src="assets/tote-logo-rgb.png" alt="とて" width="1671" height="786" fetchpriority="high"></h1>
-        <div class="hero-signature">
-          <span class="slash" aria-hidden="true"></span>
-          <div><span class="hero-roman">T O T E</span><span class="hero-role">DJ / Organizer</span></div>
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <span class="corner corner-top-left" aria-hidden="true"></span>
+      <span class="corner corner-top-right" aria-hidden="true"></span>
+      <span class="corner corner-bottom-left" aria-hidden="true"></span>
+      <span class="corner corner-bottom-right" aria-hidden="true"></span>
+      <div class="hero-inner">
+        <p class="overline hero-overline">OFFICIAL WEBSITE</p>
+        <h1 id="hero-title" class="hero-title">
+          <img src="assets/tote-logo-rgb.png" width="1671" height="786" alt="とて" class="hero-logo" fetchpriority="high">
+        </h1>
+        <div class="hero-identity">
+          <span class="identity-rule" aria-hidden="true"></span>
+          <div class="identity-copy"><span class="english-name">T O T E</span><span class="role">DJ / Organizer</span></div>
         </div>
-        <p class="hero-caption">音楽ゲームから、音楽のその先へ。</p>
-        <a class="hero-scroll" href="#next-gig">EXPLORE <span aria-hidden="true">↓</span></a>
+        <a class="hero-scroll" href="#next-gig">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
       </div>
     </section>
+
 
     <div class="page-content">
       <section class="section" id="next-gig" aria-labelledby="next-title">
         <div class="section-head"><div><span class="eyebrow">01 / UPCOMING</span><h2 id="next-title">NEXT GIG<span class="period">.</span></h2></div><p class="section-intro">次回の出演情報</p></div>
         <article class="upcoming" id="upcoming-card" aria-live="polite">
           <div class="upcoming-date" aria-label="2026年11月15日 日曜日"><span class="upcoming-year">2026</span><span class="upcoming-md">11<span class="separator">/</span>15</span><span class="upcoming-weekday">SUNDAY</span></div>
-          <div class="upcoming-info"><span class="tiny-label">NEXT APPEARANCE</span><h3>月あかり夢てらす<br>20周年 DAY3</h3><p>2026.11.15 SUN ／ 神奈川・川崎</p><p class="upcoming-note">イベント開催 17:00–23:00 ※DJの出演時間ではありません</p></div>
+          <div class="upcoming-info">
+            <span class="tiny-label">NEXT GIG</span>
+            <h3>月あかり夢てらす<br>20周年 DAY3</h3>
+            <p class="upcoming-when"><time datetime="2026-11-15T17:00:00+09:00">2026.11.15 SUN&nbsp; 17:00–23:00</time></p>
+            <p class="upcoming-venue">神奈川・川崎　月あかり夢てらす</p>
+          </div>
           <div class="upcoming-icon" aria-hidden="true">↗</div>
         </article>
       </section>
@@ -65,7 +72,7 @@
       <section class="section" id="profile" aria-labelledby="profile-title">
         <div class="section-head"><div><span class="eyebrow">02 / ABOUT</span><h2 id="profile-title">PROFILE<span class="period">.</span></h2></div><p class="section-intro">DJ / Organizer</p></div>
         <div class="profile-layout">
-          <div class="profile-visual"><div class="profile-photo-frame"><img src="assets/profile-tote.jpg" alt="DJ とてのプロフィール写真" width="900" height="900" loading="lazy"></div><div class="photo-index">PORTRAIT / TOTE</div></div>
+          <div class="profile-visual"><div class="profile-photo-frame"><img src="assets/profile-tote.jpg" alt="DJ とてのプロフィール写真" width="900" height="900" loading="lazy"></div></div>
           <div class="profile-text"><div class="profile-name-block"><span class="profile-name">とて</span><span class="profile-subtitle">TOTE — DJ / Organizer</span></div>
             <div class="profile-rule" aria-hidden="true"></div>
             <p>「音ゲー曲をクラブで聴きたい」という想いから、2010年7月に音楽ゲーム系クラブイベント「beat connection」（後のBECONE）を立ち上げ、同時にDJ活動を開始。</p>
@@ -96,7 +103,13 @@
 
       <section class="section" id="contact" aria-labelledby="contact-title">
         <div class="section-head"><div><span class="eyebrow">05 / CONNECT</span><h2 id="contact-title">CONTACT<span class="period">.</span></h2></div><p class="section-intro">出演・お問い合わせ</p></div>
-        <div class="contact-panel"><div><span class="contact-kicker">LET'S CONNECT.</span><h3>音楽のある場所で、<br>また会いましょう。</h3><p>出演のお知らせや最新の活動はXで発信しています。お問い合わせも、まずはXのアカウントをご確認ください。</p></div><a class="contact-link" href="https://x.com/tote_becone" target="_blank" rel="noopener noreferrer">𝕏&nbsp; @tote_becone <span aria-hidden="true">↗</span></a></div>
+        <div class="contact-panel">
+          <div>
+            <h3>出演などのお問い合わせはこちらから</h3>
+            <p>現在の連絡先はX（@tote_becone）です。</p>
+          </div>
+          <a class="contact-link" href="https://x.com/tote_becone" target="_blank" rel="noopener noreferrer" aria-label="Xのプロフィール @tote_becone を開く">X / @tote_becone <span aria-hidden="true">↗</span></a>
+        </div>
       </section>
     </div>
   </main>

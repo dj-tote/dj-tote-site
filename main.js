@@ -97,7 +97,7 @@
     const upcoming=document.querySelector('#upcoming-card');
     if(today>'2026-11-15') {
       upcoming.className='upcoming upcoming-empty';
-      upcoming.innerHTML='<div class="upcoming-info"><span class="tiny-label">NEXT APPEARANCE</span><h3>次回出演は準備中です。</h3><p>新しい予定はXでお知らせします。</p><a class="inline-link" href="https://x.com/tote_becone" target="_blank" rel="noopener noreferrer">Xで最新情報を見る ↗</a></div>';
+      upcoming.innerHTML='<div class="upcoming-info"><span class="tiny-label">NEXT GIG</span><h3>次回出演は準備中です。</h3><p>新しい予定はXでお知らせします。</p><a class="inline-link" href="https://x.com/tote_becone" target="_blank" rel="noopener noreferrer">Xで最新情報を見る ↗</a></div>';
     }
   }
   showUpcoming();loadGigs();
