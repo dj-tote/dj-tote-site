@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dj-tote.com/sitemap.xml
