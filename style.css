@@ -77,3 +77,20 @@ a{color:inherit}button,input,select{font:inherit}a:focus-visible,button:focus-vi
   .contact-panel h3{font-size:21px}
   .contact-panel p{font-size:12px}
 }
+
+
+/* Mobile navigation: all five links live in an accessible collapsible menu.
+   Only the narrow-screen layout changes; desktop navigation stays unchanged. */
+.mobile-menu{display:none}
+@media(max-width:920px){
+  .header-inner>.nav,.header-inner>.header-social{display:none}
+  .mobile-menu{display:block;position:relative;z-index:20;margin-left:auto}
+  .mobile-menu>summary{display:flex;align-items:center;gap:12px;cursor:pointer;list-style:none;padding:13px 1px 13px 12px;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;color:#515568;user-select:none}
+  .mobile-menu>summary::-webkit-details-marker{display:none}
+  .mobile-menu>summary::after{content:"";display:inline-block;width:20px;height:14px;background:linear-gradient(#282a36,#282a36) center top/100% 2px no-repeat,linear-gradient(#282a36,#282a36) center center/100% 2px no-repeat,linear-gradient(#282a36,#282a36) center bottom/100% 2px no-repeat}
+  .mobile-menu[open]>summary::after{content:"×";font-size:28px;line-height:14px;text-align:center;font-weight:300;background:none}
+  .mobile-menu-links{position:absolute;right:0;top:calc(100% + 10px);width:min(292px,calc(100vw - 36px));padding:7px 17px;background:#fff;border:1px solid #e7e9f0;box-shadow:0 14px 32px rgba(49,50,72,.14);display:flex;flex-direction:column}
+  .mobile-menu-links a{display:block;padding:15px 9px;border-bottom:1px solid #eff0f5;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.12em;color:#515568}
+  .mobile-menu-links a:last-child{border-bottom:0}
+  .mobile-menu-links a:hover,.mobile-menu-links a:focus-visible{color:#9279d6}
+}
