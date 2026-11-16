@@ -1,8 +1,14 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-11-16",
   "source": "DJ出演履歴（管理用Googleスプレッドシート）",
-  "count": 244,
+  "count": 245,
   "events": [
+    {
+      "date": "2026-11-15",
+      "event": "月あかり夢てらす 20th Anniversary Party Day3",
+      "venue": "月あかり夢てらす",
+      "url": "https://twipla.jp/events/745158"
+    },
     {
       "date": "2026-08-16",
       "event": "Another Juke Bocs. #007",
