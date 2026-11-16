@@ -90,15 +90,22 @@
     }
   }
   function showUpcoming() {
-    const formatter = new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'});
-    const parts=formatter.formatToParts(new Date());
-    const date=Object.fromEntries(parts.map(x=>[x.type,x.value]));
-    const today=`${date.year}-${date.month}-${date.day}`;
-    const upcoming=document.querySelector('#upcoming-card');
-    if(today>'2026-11-15') {
-      upcoming.className='upcoming upcoming-empty';
-      upcoming.innerHTML='<div class="upcoming-info"><span class="tiny-label">NEXT GIG</span><h3>次回出演は準備中です。</h3><p>新しい予定はXでお知らせします。</p><a class="inline-link" href="https://x.com/tote_becone" target="_blank" rel="noopener noreferrer">Xで最新情報を見る ↗</a></div>';
+    const upcoming = document.querySelector('#upcoming-card');
+    if (!upcoming) return;
+    // When a future gig is written into index.html, expire it on the following day (Japan time).
+    const time = upcoming.querySelector('time[datetime]');
+    if (!time) return; // Already showing the no-upcoming state.
+    const gigDate = (time.getAttribute('datetime') || '').slice(0, 10);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(gigDate)) return;
+    const formatter = new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit'});
+    const parts = formatter.formatToParts(new Date());
+    const date = Object.fromEntries(parts.map(x => [x.type, x.value]));
+    const today = `${date.year}-${date.month}-${date.day}`;
+    if (today > gigDate) {
+      upcoming.className = 'upcoming upcoming-empty';
+      upcoming.innerHTML = '<div class="upcoming-info"><h3>次回の出演予定は未定です。</h3><p>新しい出演が決まり次第、お知らせします。</p><p style="margin-top: 20px;"><a class="inline-link" href="https://x.com/tote_becone" target="_blank" rel="noopener noreferrer">Xで最新情報を見る <span aria-hidden="true">↗</span></a></p></div>';
     }
   }
+
   showUpcoming();loadGigs();
 })();
